@@ -5,7 +5,6 @@ import (
 	"fmt"
 	"math/big"
 	"time"
-	//"golang.org/x/crypto/scrypt"
 )
 
 const DEF_WRITE_SPEED = 100
