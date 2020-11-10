@@ -116,7 +116,7 @@ func main() {
 	var keyFlag = flag.String("log_key", "", "encryption key")
 	var pathFlag = flag.String("file_path", "", "path to file where to store the logs")
 	var buffFlag = flag.Int("buffer_size", DEF_BUFF_SIZE, "path to file where to store the logs")
-	var flowFlag = flag.Int("flow_speed", DEF_READ_SPEED, "path to file where to store the logs")
+	var flowFlag = flag.Int("flow_speed", DEF_READ_SPEED, "control the speed of reading from input")
 	var debugFlag = flag.Bool("debug", false, "enable debug mode which expects --file_path and --log_key to decrypt the contents of the file")
 	flag.Parse()
 	logKey := *keyFlag
