@@ -104,7 +104,7 @@ func stretchKey(key []byte) []byte {
 	// time=1 recommended in RFC
 	var time uint32 = 1
 	// memory in IDKEY is specified in kb so the actual value is 64mb
-	var memory uint32 = 64 * 1024
+	var memory uint32 = 64 * KB
 	var threads uint8 = 1
 	var keyLen uint32 = 16
 	// https://godoc.org/golang.org/x/crypto/argon2#IDKey
@@ -146,10 +146,8 @@ func main() {
 		return
 	}
 
-	// handle minimal buffer size?
 	outFile, fileErr := os.Create(filePath)
 	if fileErr != nil {
-		//todo
 		panic("something went wrong")
 	}
 	writer := bufio.NewWriterSize(outFile, buffSize)
